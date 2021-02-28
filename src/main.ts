@@ -19,17 +19,11 @@ async function bootstrap() {
           transform: true,
         })
       );
-      // app.useGlobalInterceptors(new LoggingInterceptor());
-      /*const apiModuleSeeder = app.get(ApiModuleSeed);
-      const apiModule = await apiModuleSeeder.insertApiModules();
-      if(apiModule) {
-          Logger.log(chalk.blue.bold('🚀 Seeding Api Module Login settings. Done.!'), 'Api Module');
-      }*/
-
+      
       const port = config.get<number>('APP_PORT'); // loading port using config service            
       await app.listen(port);
       
-      Logger.log(chalk.bold.blue(`🚀  Server ready at ${await app.getUrl()}/sample`), 'Bootstrap');
+      Logger.log(chalk.bold.blue(`🚀  Server ready at ${await app.getUrl()}/graphql`), 'Bootstrap');
     } catch (error) {
       // logger.error(error)
       Logger.error(`❌  Error starting server, ${error}`, '', 'Bootstrap', false);
