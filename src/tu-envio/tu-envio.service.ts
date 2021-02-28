@@ -9,7 +9,7 @@ export class TuEnvioService {
         return "hola mundo";
     }
 
-    async getTuEnvio(url:string) {
+    async getTuEnvio(url: string): Promise<any> {
         const axios = require('axios')
         try {
             const response = await axios.get(url);
