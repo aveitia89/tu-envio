@@ -53,9 +53,11 @@
     "pg": "^8.5.1",
     "puppeteer": "^6.0.0",
     "reflect-metadata": "^0.1.13",
+    "request": "^2.88.2",
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.3",
     "serverless-mysql": "^1.5.4",
+    "tough-cookie": "^4.0.0",
     "typeorm": "^0.2.29"
   },
   "devDependencies": {
