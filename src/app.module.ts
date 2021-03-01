@@ -49,7 +49,7 @@ import { TuEnvioModule } from './tu-envio/tu-envio.module';
         inject: [ConfigService],
         useFactory: async (configService: ConfigService) => ({
             autoSchemaFile: true,
-            // typeDefs:
+            // typeDefs:            
             installSubscriptionHandlers: true,
             debug: configService.get<string>('NODE_ENV') === 'dev',
             playground: configService.get<string>('NODE_ENV') === 'dev',
